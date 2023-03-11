@@ -69,6 +69,19 @@
             Console.WriteLine("Triangle IS NOT 'Isosceles'");
         }
 
+        Console.WriteLine();
+        double perimeter = ab + bc + ac;
+        Console.WriteLine($"Perimeter: '{perimeter}'");
+        Console.WriteLine();
+        Console.WriteLine("Parity numbers in range from 0 to triangle perimeter");
+        for (int i = 0; i < perimeter; i++)
+        {
+            if ((i % 2) == 0)
+            {
+                Console.WriteLine(i);
+            }
+        }
+
 
     }
 }
