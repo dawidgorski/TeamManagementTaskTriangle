@@ -15,6 +15,10 @@
     {
         return Math.Sqrt(Math.Pow((x1 - x2), 2) + Math.Pow((y1 - y2), 2));
     }
+    public static Boolean IsEquilateral(double ab, double bc, double ac)
+    {
+        return (ab == bc && bc == ac);
+    }
 
     public static void Main(string[] args)
     {
@@ -41,6 +45,15 @@
         Console.WriteLine($"Length of AC is: '{ac}'");
 
         Console.WriteLine();
+
+        if (IsEquilateral(ab, bc, ac))
+        {
+            Console.WriteLine("Triangle IS 'Equilateral'");
+        }
+        else
+        {
+            Console.WriteLine("Triangle IS NOT 'Equilateral'");
+        }
 
 
     }
