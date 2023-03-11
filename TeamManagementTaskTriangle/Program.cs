@@ -25,6 +25,18 @@
         return (ab == bc || ab == ac || bc == ac);
     }
 
+    public static Boolean IsRight(double ab, double bc, double ac)
+    {
+        List<Double> list = new List<Double>();
+        list.Add(ab);
+        list.Add(bc);
+        list.Add(ac);
+        list.Sort();
+        double delta = 0.1;
+        return (Math.Abs(Math.Pow(list[2], 2) - (Math.Pow(list[1], 2) + Math.Pow(list[0], 2)))) <= delta;
+
+    }
+
     public static void Main(string[] args)
     {
 
@@ -69,6 +81,14 @@
             Console.WriteLine("Triangle IS NOT 'Isosceles'");
         }
 
+        if (IsRight(ab, bc, ac))
+        {
+            Console.WriteLine("Triangle IS 'Right'");
+        }
+        else
+        {
+            Console.WriteLine("Triangle IS NOT 'Right'");
+        }
         Console.WriteLine();
         double perimeter = ab + bc + ac;
         Console.WriteLine($"Perimeter: '{perimeter}'");
