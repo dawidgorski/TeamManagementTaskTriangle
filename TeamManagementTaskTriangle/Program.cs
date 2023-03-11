@@ -20,6 +20,11 @@
         return (ab == bc && bc == ac);
     }
 
+    public static Boolean IsIsosceles(double ab, double bc, double ac)
+    {
+        return (ab == bc || ab == ac || bc == ac);
+    }
+
     public static void Main(string[] args)
     {
 
@@ -53,6 +58,15 @@
         else
         {
             Console.WriteLine("Triangle IS NOT 'Equilateral'");
+        }
+
+        if (IsIsosceles(ab, bc, ac))
+        {
+            Console.WriteLine("Triangle IS 'Isosceles'");
+        }
+        else
+        {
+            Console.WriteLine("Triangle IS NOT 'Isosceles'");
         }
 
 
